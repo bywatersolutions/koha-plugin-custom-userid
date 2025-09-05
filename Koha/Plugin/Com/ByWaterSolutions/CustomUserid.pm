@@ -56,6 +56,10 @@ sub install() {
 }
 
 
+sub configure {
+    my ( $self, $args ) = @_;
+    print $self->{'cgi'}->redirect("/cgi-bin/koha/tools/letter.pl?op=add_form&branchcode=&module=members&code=USERID_TEMPLATE");
+}
 
 sub patron_generate_userid {
     my ($self, $params) = @_;
